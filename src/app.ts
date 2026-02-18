@@ -12,6 +12,9 @@ app.use(cors());
 // Mengaktifkan middleware untuk parsing JSON
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("dBackend API is Running");
+});
 // Menggunakan rute untuk API Quran
 app.use("/api/quran", quranRoutes);
 
